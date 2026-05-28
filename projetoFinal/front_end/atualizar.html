@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="atualizar.css" />
+  </head>
+  <body>
+    <section class="conteiner-form">
+      <h2>Atualizar item</h2>
+
+      <form
+        class="formCadastro"
+        id="formAtualizar"
+        action="../back_end/atualizar.php"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <section class="formulrio">
+          <input
+            type="hidden"
+            name="id"
+            id="idAtualizar"
+            placeholder="id"
+            required
+          />
+          <input type="hidden" name="imagem_atual" id="imagem_atual" />
+
+          <input
+            type="text"
+            name="nome"
+            id="nomeAtualizar"
+            placeholder="nome"
+            required
+          />
+          <input
+            type="number"
+            name="numero"
+            id="numeroAtualizar"
+            placeholder="n#"
+            required
+          />
+          <textarea
+            name="email"
+            id="emailAtualizar"
+            placeholder="descrição"
+            required
+          ></textarea>
+        </section>
+
+        <input type="file" id="imagem" name="imagem" accept="image/*" />
+
+        <img id="previewImagemUpload" src="" alt="Preview da Imagem" />
+
+        <button type="submit" class="btn-one">atualizar dados</button>
+        <button
+          type="button"
+          class="btn-two"
+          onclick="window.location.href = '../index.html'"
+        >
+          cancelar
+        </button>
+      </form>
+    </section>
+    <script src="atualizar.js"></script>
+  </body>
+</html>

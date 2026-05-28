@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>POKEDEX</h1>
+      <section class="barra">
+        <input
+          type="text"
+          name="barra"
+          id="barra"
+          placeholder="pesquise por nome ou numero#"
+        />
+        <button type="submit" id="btnpsq">
+          <img src="search.png" alt="icone lupa" />
+        </button>
+      </section>
+
+      <section class="ordenar">
+        <select name="ordem" id="campoFiltro" placeholder="ordenar por">
+          <option value="numero_asc">Número: menor - maior</option>
+          <option value="numero_desc">Número: maior - menor</option>
+          <option value="nome_asc">Nome: A-Z</option>
+          <option value="nome_desc">Nome: Z-A</option>
+        </select>
+      </section>
+
+      <section class="redirect">
+        <button
+          onclick="window.location.href = 'front_end/cadastro.html'"
+          id="redirect"
+        >
+          Novo Item
+        </button>
+      </section>
+    </header>
+    <main class="main" id="maincont">
+      <div class="containerCards" id="containerCards">
+        <button class="botaoAtualizar"></button>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

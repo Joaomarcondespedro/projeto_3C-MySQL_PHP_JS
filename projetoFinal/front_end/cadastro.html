@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cadastro.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=BBH+Bartle&family=Bebas+Neue&family=Bungee+Inline&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="form-conteiner">
+      <h2>cadastrar novo item</h2>
+
+      <form
+        class="formCadastro"
+        id="formCadastro"
+        action="../back_end/cadastro.php"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <section class="input-group">
+          <label for="nome">nome: </label>
+          <input type="text" name="nome" id="nome" class="input" required />
+        </section>
+
+        <section class="input-group">
+          <label for="numero">n#: </label>
+          <input
+            type="number"
+            name="numero"
+            id="numero"
+            class="input"
+            required
+          />
+        </section>
+
+        <section class="input-group">
+          <label for="email">descrição: </label>
+          <textarea name="email" id="email" class="input" required></textarea>
+        </section>
+
+        <input
+          type="file"
+          id="imagem"
+          name="imagem"
+          accept="image/png, image/jpeg, image/jpg, image/gif"
+          required
+        />
+
+        <img id="previewImagemUpload" src="" alt="Sua imagem" />
+
+        <section class="form-action">
+          <button type="submit" class="btn" name="enviar">salvar dados</button>
+          <button
+            type="button"
+            class="btn"
+            onclick="window.location.href = '../index.html'"
+          >
+            Voltar
+          </button>
+        </section>
+      </form>
+    </section>
+    <script src="cadastro.js"></script>
+  </body>
+</html>
